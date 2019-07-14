@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 body {
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .backdrop {
@@ -14,14 +16,16 @@ body {
 }
 
 .main-header {
-  background-color: aqua;
+  background-color:white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 3px solid rgb(56, 144, 216);
 }
 
 .nav-brand {
   margin-left: 1rem;
+  z-index: 102;
 }
 
 .nav-brand img {
@@ -48,8 +52,9 @@ body {
 }
 
 .mobile-nav {
-  background: aqua;
-  width: 80%;
+  background: white;
+  border-top: 3px solid rgb(56, 144, 216);
+  width: 100%;
   height: 100vh;
   z-index: 101;
   position: fixed;
@@ -58,30 +63,44 @@ body {
   display: none;
 }
 .mobile-nav__list {
-  margin: 0;
+  margin-top: 5rem;
+  margin-right: 5rem; 
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.mobile-nav__list:nth-of-type(1){
-  margin-right: 3rem;
+.mobile-nav__list-item {
+  z-index: 200;
 }
 
-.mobile-nav__list-item{
-  margin-top: 2rem;
+.mobile-nav__list-item a { 
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-nav__list-item:hover {
+  cursor: pointer;
+}
+.mobile-nav__list-item img {
+  margin-top: 0.5rem; 
+  width: 2.5rem;
 }
 
 /* TOGGLE HAMBURGER BUTTON */
 
 .toggle-button {
-  width: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding-top: 0;
   padding-bottom: 0;
   vertical-align: middle;
+  z-index: 102;
+}
+.toggle-button img {
+  width: 2.5rem;
 }
 
 .toggle-button:focus {
@@ -104,7 +123,6 @@ body {
 
 
 @media (min-width: 40rem) {
-  
   .main-nav {
     display: flex;
   }
@@ -116,6 +134,9 @@ body {
     margin-right: 1rem;
   }
   .toggle-button {
+    display: none;
+  }
+  .mobile-nav {
     display: none;
   }
 }
