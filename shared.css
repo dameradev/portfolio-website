@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+}
+
+.backdrop {
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  background: rgb(0, 0, 0, 0.5);
+  display: none;
+}
+
+.main-header {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  margin-left: 1rem;
+}
+
+.nav-brand img {
+  height: 2.5rem;
+}
+.nav-brand a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+}
+.nav-brand a h5 {
+  margin-left: 0.5rem;
+}
+
+.main-nav {
+  display: none;
+}
+
+.main-nav__list-item a,
+.mobile-nav__list-item a {
+  text-decoration: none;
+  color:rgb(41, 41, 41);
+}
+
+.mobile-nav {
+  background: aqua;
+  width: 80%;
+  height: 100vh;
+  z-index: 101;
+  position: fixed;
+  top:0;
+  left:0;
+  display: none;
+}
+.mobile-nav__list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mobile-nav__list:nth-of-type(1){
+  margin-right: 3rem;
+}
+
+.mobile-nav__list-item{
+  margin-top: 2rem;
+}
+
+/* TOGGLE HAMBURGER BUTTON */
+
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+
+/* --------------------- */
+
+.open {
+  display: block !important;
+}
+
+
+@media (min-width: 40rem) {
+  
+  .main-nav {
+    display: flex;
+  }
+  .main-nav__list{
+    display: flex;
+    list-style: none;
+  }
+  .main-nav__list-item {
+    margin-right: 1rem;
+  }
+  .toggle-button {
+    display: none;
+  }
+}
