@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300,400&display=swap');
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* MODAL BACKDROP */
 
 .backdrop {
   position: fixed;
@@ -14,6 +27,8 @@ body {
   background: rgb(0, 0, 0, 0.5);
   display: none;
 }
+
+/* MAIN HEADER */
 
 .main-header {
   background-color:white;
@@ -51,6 +66,8 @@ body {
   color:rgb(41, 41, 41);
 }
 
+/* MOBILE NAVIGATION */
+
 .mobile-nav {
   background: white;
   border-top: 3px solid rgb(56, 144, 216);
@@ -64,7 +81,7 @@ body {
 }
 .mobile-nav__list {
   margin-top: 5rem;
-  margin-right: 5rem; 
+  margin-right: 3rem; 
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -121,6 +138,7 @@ body {
   display: block !important;
 }
 
+/* DESKTOP VIEW */
 
 @media (min-width: 40rem) {
   .main-nav {
@@ -136,7 +154,60 @@ body {
   .toggle-button {
     display: none;
   }
-  .mobile-nav {
-    display: none;
+  .open {
+    display: none !important;
   }
 }
+
+/* HERO AREA */
+
+main {
+  
+}
+
+.hero-text {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hero-text__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 2.3rem;
+}
+
+.hero-text__paragraph {
+  /* padding: 0 1rem; */
+  font-size:1.3rem;
+  font-weight: 300;
+  line-height: 1.5;  
+}
+
+.portfolio {
+  margin-top: 4rem;
+}
+
+.portfolio-list { 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-list__item:first-of-type {
+  border: none;
+}
+
+.portfolio-list__item {
+  background: url("images/portfolio/item1.png") no-repeat border-box #121212;
+  background-size: 30% 50%;
+  background-position: center center; 
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  border-top: 1px solid rgb(56, 144, 216);
+}
+
+
+
