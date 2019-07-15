@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -212,8 +216,7 @@ main {
 }
 
 .view-portfolio--cta:hover, 
-.view-portfolio--cta:active,
-.view-portfolio--cta:focus{
+.view-portfolio--cta:active{
   background:  rgb(56, 144, 216);
   color: white;
   transition: 100ms;

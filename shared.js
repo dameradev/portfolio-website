@@ -21,3 +21,17 @@ backdrop.addEventListener('click', () => {
   mobile.classList.remove('open');
   backdrop.classList.remove('open');
 })
+
+// Scroll to a certain element
+// get offset top for fixed header
+let headerHeigh = document.querySelector('.main-header').clientHeight;
+let portfolio = document.getElementById('portfolio').offsetTop - headerHeigh;
+console.log(portfolio);
+let viewPortfolio = document.querySelector('.view-portfolio--cta');
+
+viewPortfolio.addEventListener('click', ()=> {
+  window.scroll({ 
+    top: portfolio,
+    behavior: 'smooth' 
+  });
+})
