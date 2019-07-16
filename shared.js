@@ -23,15 +23,28 @@ backdrop.addEventListener('click', () => {
 })
 
 // Scroll to a certain element
-// get offset top for fixed header
-let headerHeigh = document.querySelector('.main-header').clientHeight;
-let portfolio = document.getElementById('portfolio').offsetTop - headerHeigh;
-console.log(portfolio);
+// // get offset top for fixed header
+// let headerHeigh = document.querySelector('.main-header').clientHeight;
+// let portfolio = document.getElementById('portfolio').offsetTop - headerHeigh;
+// console.log(portfolio);
 let viewPortfolio = document.querySelector('.view-portfolio--cta');
 
+
+let portfolio = document.getElementById('portfolio');
+// var yourHeight = document.querySelector('.main-header').clientHeight
+
+// // scroll to your element
+// portfolio.scrollIntoView(true);
+
+// // now account for fixed header
+// var scrolledY = window.scrollY;
+
+// console.log(scrolledY);
+// if(scrolledY){
+//   window.scroll(0, scrolledY - yourHeight);
+// }
+
+
 viewPortfolio.addEventListener('click', ()=> {
-  window.scroll({ 
-    top: portfolio,
-    behavior: 'smooth' 
-  });
+  portfolio.scrollIntoView(true);
 })
