@@ -67,9 +67,12 @@ main {
   height:25vh;
   background-size: 15vh 50%;
   background-position: center center; 
+  transition: background-size 0.6s;
 }
 .portfolio-list__item:hover .bg-image {
-  animation: portfolio-image 400ms ease-in forwards;
+  background-size: 20vh 70%;
+  transition: background-size 0.6s; 
+  /* animation: portfolio-image 600ms linear forwards; */
 }
 
 .portfolio-list__item h2 {
@@ -91,17 +94,8 @@ main {
   bottom: 0;
   font-weight: 100;
   font-style: italic;  
-  animation: technologies-pop 500ms ease-in-out;
+  animation: technologies-pop 200ms ease-in-out;
 }
-/* 
-.portfolio-list__item:hover,
-.portfolio-list__item:active {
-  background-color: #464646;
-}
-
-.portfolio-list__item:hover h2 {
-  color:white;
-} */
 
 .portfolio-list__item:hover .technologies-used{
   display: inline;
@@ -115,6 +109,17 @@ main {
   }
   .portfolio-list__item {
     width: calc(100%  /3);
+    border:none;
+    /* border-right: 1px solid rgb(56, 144, 216); */
+  }
+  /* .portfolio-list__item:first-of-type {
+    border-top: 1px solid rgb(56, 144, 216);
+  }*/
+  .portfolio-list__item:nth-child(even) {
+    background-color: #464646;
+  }
+  .portfolio-list__item:nth-child(even) h2 {
+    color:white;
   }
 }
 
@@ -131,14 +136,5 @@ main {
   100% {
     transform: translateY(0rem);
     opacity: 1;
-  }
-}
-
-@keyframes portfolio-image {
-  0% {
-    background-size: 15vh 50%;
-  }
-  100% {
-    background-size: 24vh 80%;
   }
 }
