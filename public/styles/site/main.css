@@ -64,7 +64,7 @@
   border-top: 1px solid rgb(56, 144, 216);
 }
 .portfolio-list__item .bg-image {
-  background: url("images/portfolio/item1.png") no-repeat border-box ;
+  background: url("/images/portfolio/item1.png") no-repeat border-box ;
   height:25vh;
   background-size: 15vh 50%;
   background-position: center center; 
@@ -73,7 +73,6 @@
 .portfolio-list__item:hover .bg-image {
   background-size: 20vh 70%;
   transition: background-size 0.6s; 
-  /* animation: portfolio-image 600ms linear forwards; */
 }
 
 .portfolio-list__item h2 {
@@ -103,8 +102,6 @@
 }
 
 .about-me__wrapper {
-  /* margin-top: 5rem; */
-  /* border-top: 3px solid rgb(56, 144, 216); */
   margin-bottom:3rem; 
 }
 
@@ -216,7 +213,7 @@
     
   }
   .portfolio-list__item:nth-child(even) {
-    background-color: #464646;
+    background-color: #15472e;
   }
   .portfolio-list__item:nth-child(even) h2 {
     color:white;

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Damjan_Radev</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link href="/styles/site.min.css" rel="stylesheet">
+
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+			- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+  <div class="backdrop"></div>
+    <header class="main-header">
+      <div class="nav-brand">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Damjan Radev">
+          <h5>Damjan Radev</h5>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          {{!-- <li {{#ifeq ../section key}}class="active"{{else}}class="main-nav__list-item"{{/ifeq}}>
+              <a href="{{ href }}">{{ label }}</a>
+            </li> --}}
+          {{# each navLinks}}
+            <li class="main-nav__list-item">
+              <a href="{{ href }}">{{ label }}</a>
+            </li>
+          {{/each}}
+          {{#if user}}
+          <li class="main-nav__list-item"><a href="/keystone/signout">Sign Out</a></li>
+          {{else}}
+          <li class="main-nav__list-item"><a href="/keystone/signin">Sign In</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+      <button class="toggle-button">
+        <img src="images/menu.png" id="toggle-image">
+      </button>
+    </header>
+    
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <div>
+          <li class="mobile-nav__list-item">
+            <a href="porfolio/index.html">
+              <p>Portfolio</p> 
+              <img src="images/portfolio.png" alt="">
+            </a>
+          </li>
+          <li class="mobile-nav__list-item">
+            <a href="about-me/index.html">
+              <p>About me</p> 
+              <img src="images/about-me.png" alt="">
+            </a>
+          </li>
+        </div>
+        <div>
+          <li class="mobile-nav__list-item">
+            <a href="blog/index.html">
+              <p>Blog</p>  
+              <img src="images/blog.png" alt="">
+            </a>
+          </li>
+          <li class="mobile-nav__list-item">
+            <a href="contact/index.html">
+              <p>Contact</p>
+              <img src="images/contact.png" alt="">
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <div id="body">
+			{{#if messages}}
+			<div id="flash-messages" class="container">
+				{{#if messages.info}}
+				<div class="alert alert-info">
+						{{{flashMessages messages.info}}}
+				</div>
+				{{/if}}
+				{{#if messages.success}}
+				<div class="alert alert-success">
+						{{{flashMessages messages.success}}}
+				</div>
+				{{/if}}
+				{{#if messages.warning}}
+				<div class="alert alert-warning">
+						{{{flashMessages messages.warning}}}
+				</div>
+				{{/if}}
+				{{#if messages.error}}
+				<div class="alert alert-danger">
+						{{{flashMessages messages.error}}}
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+			<!-- The content block should contain the body of your template's content-->
+		</div>
+	
+    <main>
+      {{{body}}}
+    </main>
+    <footer class="main-footer">
+      <nav>
+        <ul class="main-footer__links">
+         {{# each navLinks}}
+            <li class="main-footer__link">
+              <a href="{{ href }}">{{ label }}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </nav>
+    </footer>
+
+  <script src="js/shared.js"></script>
+		
+		{{{isAdminEditorJS user}}}
+	</body>
+</html>
