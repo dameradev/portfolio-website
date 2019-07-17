@@ -104,7 +104,7 @@
 
 .about-me__wrapper {
   /* margin-top: 5rem; */
-  border-top: 3px solid rgb(56, 144, 216);
+  /* border-top: 3px solid rgb(56, 144, 216); */
   margin-bottom:3rem; 
 }
 
@@ -139,7 +139,9 @@
   margin: 0;
   padding: 0;
 }
-
+.skills-list__item {
+  width: 100%;
+}
 .skills-list__item  h3 {
   font-weight: 300;
   font-size: 1.5rem;
@@ -148,16 +150,15 @@
 }
 
 .skills-list__item meter {
-  width: 80%;
+  width: 90%;
   height: 5vh;
-  vertical-align: middle;
-  margin-right: 2rem;
-  
+  vertical-align: middle;  
 }
 .skills-list__item p {
   display: inline-block;
   vertical-align: middle;
   font-weight: 400;
+  margin-left:0.5rem;
 }
 
 
@@ -165,9 +166,6 @@
   .hero {
     width: 80%;
     margin:  auto;
-    /* display: flex; */
-    /*
-    flex-direction: column; */
   }
   .hero-area {
     margin-top: 10rem;
@@ -180,8 +178,6 @@
     margin-top: 0;
     width: 50%;
     margin: 0;
-    /* margin-right: 20rem; */
-    /* width: 30%; */
   }
   .hero-text__title {
     font-size: 3rem;
@@ -225,6 +221,26 @@
   .portfolio-list__item:nth-child(even) h2 {
     color:white;
   }
+  .about-me__wrapper {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  .about-me {
+    width: 40%;
+  }
+  .skills {
+    width: 40%;
+  }
+  .skills-list__item div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
 }
  
 @media(max-width: 54rem) {
