@@ -1,7 +1,3 @@
-main {
-  margin-top: 7rem;
-}
-
 .hero-text { 
   text-align: center;
   width: 80%;
@@ -107,7 +103,8 @@ main {
 }
 
 .about-me__wrapper {
-  border-top: 1px solid rgb(56, 144, 216);
+  /* margin-top: 5rem; */
+  border-top: 3px solid rgb(56, 144, 216);
   margin-bottom:3rem; 
 }
 
