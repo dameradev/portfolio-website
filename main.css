@@ -106,6 +106,64 @@ main {
   display: inline;
 }
 
+.about-me__wrapper {
+  border-top: 1px solid rgb(56, 144, 216);
+  margin-bottom:3rem; 
+}
+
+.about-me {
+  
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-me__title {
+  font-weight: 100;
+  text-align: center;
+}
+.about-me__paragraph {
+  text-align: justify;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.skills {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skills-title {
+  font-weight: 100;
+  text-align: center;
+}
+
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-list__item  h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.skills-list__item meter {
+  width: 80%;
+  height: 5vh;
+  vertical-align: middle;
+  margin-right: 2rem;
+  
+}
+.skills-list__item p {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 400;
+}
+
+
 @media(min-width: 40rem) {
   .hero {
     width: 80%;
