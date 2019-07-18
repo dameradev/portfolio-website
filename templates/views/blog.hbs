@@ -1,33 +1,49 @@
-<div class="container">
-	<h1>Blog</h1>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
-			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
-			<div class="blog">
-				{{# each data.posts.results}}
-				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}}{{/if}}
-					</p>
-					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
-					<p>{{{content.brief}}}</p>
-					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
-				</div>
-				{{/each}}
-			</div>
-		</div>
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
-				<a href="/blog" class="active list-group-item">All Categories</a>
-				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
-				{{/each}}
-			</div>
-		</div>
-	</div>
-	{{>pagination}}
-</div>
+{{!--  width=160 height=160
+
+  
+  <div class="blog-post">
+      <div class="blog-header">
+        <img src="../images/blog/blog-post2.jpg" alt="">
+        <div class="blog-header__title">
+          <h1>Forum like app made easy with node!</h1>
+          <p>by Damjan Radev</p>
+        </div>
+      </div>
+  </div>
+  
+</div> --}}
+<link rel="stylesheet" href="styles/site/blog.css">
+<div class="blog-wrapper">
+  {{!-- <h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4> --}}
+  <div class="blog">
+    {{# each data.posts.results}}
+    <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="blog-post">
+      <a href="{{postUrl slug}}">
+        <div class="blog-header">
+          {{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}">{{/if}}
+          <div class="blog-header__title">
+            <h1>{{{title}}}</h1>
+            <p>{{{categoryList categories prefix="Posted in "}}}
+            {{#if author.name.first}}by {{author.name.first}}{{/if}}</p>
+          </div>
+        </div>
+      </a>
+      <div class="blog-content">
+        <p>{{{content.brief}}}</p>
+        {{#if content.extended}}<a class="read-more" href="{{postUrl slug}}">Read more...</a>{{/if}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="categories">
+    <h1 class="categories-title">Categories</h1>
+    <ul class="categories-list">
+      {{# each data.categories }}
+      <li class="categories-list__item">
+        <a href="{{categoryUrl key}}">{{name}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>  
