@@ -133,3 +133,21 @@
     margin-left:0;
   }
 }
+
+.code { 
+  background:#f5f8fa; 
+  background-repeat:no-repeat; 
+  border: solid #5C7B90; 
+  border-width: 1px 1px 1px 20px; 
+  color: #000000; 
+  font: 13px 'Courier New', Courier, monospace; 
+  line-height: 16px; 
+  margin: 10px 0 10px 10px; 
+  min-height: 16px; 
+  overflow: auto; 
+  padding: 28px 10px 10px; 
+  width: 90%; 
+} 
+.code:hover { 
+  background-repeat:no-repeat;
+ }
