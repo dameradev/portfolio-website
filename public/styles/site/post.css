@@ -5,6 +5,8 @@ main {
 
 article {
   margin-top: 5rem;
+  background: rgb(240, 240, 240);
+  padding: 1rem;
 }
 
 article .image {
@@ -14,4 +16,8 @@ article .image {
 article img {
   width: 100%;
   height: 100%;
+}
+
+pre[class*="language-"] {
+ border: 1px solid black;
 }

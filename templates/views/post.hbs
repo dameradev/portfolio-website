@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/styles/site/post.css">
 <link rel="stylesheet" href="/themes/prism.css">
+
 <main>
   <article>
     <header>
@@ -11,11 +12,10 @@
       </h5>
     </header>
     <div class="post">
-      {{#if data.post.image}} <div class="image"> <img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}"></div>{{/if}}
+      {{#if data.post.image}} <div class="image"> <img src="{{{cloudinaryUrl data.post.image  crop='fit' }}}"></div>{{/if}}
       {{{data.post.content.extended}}}
     </div>
   </article>
 </main>
-
 
 <script src="/js/prism.js"></script>
