@@ -1,0 +1,27 @@
+.portfolio-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.portfolio-wrapper .page-title {
+  font-weight: 300;
+  text-align: center;
+  border-bottom: 3px solid rgb(231, 231, 231);
+  padding-bottom: 20px;
+}
+
+.portfolio-wrapper .portfolio-item {
+  background: gray;
+  height:25vh;
+  padding: 20px;
+}
+
+.portfolio-wrapper .portfolio-item a {
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.portfolio-wrapper img{
+width: 100%;
+border: 2px solid blue;
+}
