@@ -12,5 +12,5 @@ exports = module.exports = function(req, res) {
   view.query('portfolios', keystone.list('Portfolio').model.find());
 
   // Render view
-  view.render('portfolio')
+  view.render('portfolios')
 }

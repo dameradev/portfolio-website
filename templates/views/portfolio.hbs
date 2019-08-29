@@ -1,21 +1,29 @@
 <div class="container">
-  <h1>dame</h1>
   <div class="row">
     <div class="col-md-12 col-lg-12">
-      <div class="row">
-
-        {{{portfolios.length}}}
-        {{#each portfolios}}
-          <div class="col-md-4 col-lg-4">
-            <h2><a href="{{portfolioUrl slug}}">{{{title}}}</a></h2>
-            {{#if image}}
-              <img src="{{{cloudinaryUrl image crop="fit" width=160 height=160}}}" class="thumbnail" alt="">        
+      <article>
+        <p><a href="/portfolio-items">&larr; Back to products</a></p>
+        <hr>
+        <header>
+          <h1>{{data.portfolio.title}}</h1>
+        </header>
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            {{#if data.portfolio.image}}
+              <img src="{{cloudinaryUrl data.product.image crop='fit'}}"  class="img-responsive" alt="">
             {{/if}}
-            {{{description}}}
-            
           </div>
-        {{/each}}
-      </div>
+          <div class="col-md-6 col-lg-6">
+            
+            <div class="well">
+              <p>{{{data.portfolio.description}}}</p>
+              
+            </div>
+             <a class="btn btn-success btn-block" href="/contact">Ask about this product!</a>
+          </div>
+        </div>
+
+      </article>
     </div>
   </div>
 </div>
