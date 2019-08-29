@@ -196,6 +196,9 @@ module.exports = function () {
 		return ('/blog/post/' + postSlug);
 	};
 
+  _helpers.portfolioUrl = function (portfolioSlug, options) {
+		return ('/portfolio-items/' + portfolioSlug);
+	};
 	// might be a ghost helper
 	// used for pagination urls on blog
 	_helpers.pageUrl = function (pageNumber, options) {
