@@ -1,27 +1,48 @@
-.portfolio-wrapper {
+.portfolio {
   width: 80%;
   margin: 0 auto;
-}
-
-.portfolio-wrapper .page-title {
-  font-weight: 300;
-  text-align: center;
-  border-bottom: 3px solid rgb(231, 231, 231);
-  padding-bottom: 20px;
-}
-
-.portfolio-wrapper .portfolio-item {
-  background: gray;
-  height:25vh;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-shadow: 1px 3px 8px 1px #ccc;
   padding: 20px;
+  height: 60vh;
 }
 
-.portfolio-wrapper .portfolio-item a {
-  text-decoration: none;
+.portfolio .portfolio-description {
+
+}
+
+.portfolio-area {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.portfolio-description h1 {
   font-weight: 300;
 }
 
-.portfolio-wrapper img{
-width: 100%;
-border: 2px solid blue;
+.portfolio-details {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.portfolio .image {
+  height: 40vh;
+  width: 40vh;
+  
+}
+
+.image img {
+  width: 100%;
+}
+
+
+.portfolio-details p,
+.portfolio-details a {
+  
+  padding: 0;
+  margin: 0;
 }

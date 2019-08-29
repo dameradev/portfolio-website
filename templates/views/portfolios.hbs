@@ -1,16 +1,20 @@
-<link rel="stylesheet" href="styles/site/portfolio.css">
+<link rel="stylesheet" href="styles/site/portfolios.css">
 <div class="portfolio-wrapper">
   <h1 class="page-title">My personal portfolio</h1>
     {{#each portfolios}}
       <div class="portfolio-item">
         <a href="{{portfolioUrl slug}}">
-        <h2>{{{title}}}</h2>
-        {{#if image}}
-          <img src="{{{cloudinaryUrl image crop="fit" width=160 height=160}}}" class="thumbnail" alt="">        
-        {{/if}}
-
+        <div class="portfolio-desc">
+          <h2>{{{title}}}</h2>
+          {{{description}}}
+        </div>
         
-        {{{description}}}
+        
+        {{#if image}}
+        <div class="image">
+          <img src="{{{cloudinaryUrl image crop="fit" }}}" alt="">        
+        </div>
+        {{/if}}
         </a>
       </div>
     {{/each}}  
