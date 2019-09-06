@@ -4,7 +4,11 @@
   <div class="hero-area">
     <div class="hero-text">
       <h1 class="hero-text__title">Hey I'm Damjan</h1>
-      <p class="hero-text__paragraph">Helping start-ups, small businesses, and agencies achieve high quality websites and exceptional user experience. With a focus on backend with node, and react as a frontend, you will be sure that your application has a quick and responive feel.</p>        
+      <div class="text-typer">
+        <p>I'm a <span class="typer" data-delay="150" data-words="Fullstack,JavaScript,React.js,Node.js" data-colors="red,orange,blue,green"></span> Web Developer.</p>
+        <span class="cursor" data-owner="first-typer"></span>
+      </div>
+      <p class="hero-text__paragraph">Helping small businesses get their website up and running, and increase their presence online.</p>        
     </div>
     <div class="profile-image-container">
       <img src="images/damjan.jpg" alt="" class="profile-image">
@@ -16,36 +20,17 @@
     
   <!-- <h1 id="porfolio-title">My porfolio</h1> -->
   <ul class="portfolio-list">
-    <li class="portfolio-list__item">
-      <h2>Project: Node.Js</h2>
-      <div class="bg-image">.</div>
-      <p class="technologies-used">node.js, react, mongoDb</p>
-    </li>
-    <li class="portfolio-list__item">
-      <h2>Project: Node.Js</h2>
-      <div class="bg-image">.</div>
-      <p class="technologies-used">node.js, react, mongoDb</p>
-    </li>
-    <li class="portfolio-list__item">
-      <h2>Project: Node.Js</h2>
-      <div class="bg-image">.</div>
-      <p class="technologies-used">node.js, react, mongoDb</p>
-    </li>
-    <li class="portfolio-list__item">
-      <h2>Project: Node.Js</h2>
-      <div class="bg-image">.</div>
-      <p class="technologies-used">node.js, react, mongoDb</p>
-    </li>
-    <li class="portfolio-list__item">
-      <h2>Project: Node.Js</h2>
-      <div class="bg-image">.</div>
-      <p class="technologies-used">node.js, react, mongoDb</p>
-    </li>
-    <li class="portfolio-list__item">
-      <h2>Project: Node.Js</h2>
-      <div class="bg-image">.</div>
-      <p class="technologies-used">node.js, react, mongoDb</p>
-    </li>
+    {{#each portfolios}}
+      <a class="portfolio-list__item" href="{{portfolioUrl slug}}">
+        <li >
+          <h2>{{{title}}}</h2>
+          
+          <div class="bg-image">{{#if image}}<img src="{{{cloudinaryUrl image crop="fit" }}}" alt=""> {{/if}}</div>
+          {{!-- {{{description}}} --}}
+          <p class="technologies-used">node.js, react, mongoDb</p>
+        </li>  
+      </a>
+    {{/each}}  
   </ul> 
 </div>
 <div class="about-me__wrapper">
@@ -80,3 +65,5 @@
     </ul>
   </div>
 </div>
+{{!-- <script src="js/textTypeEffect.js"></script> --}}
+<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>

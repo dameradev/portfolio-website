@@ -1,10 +1,13 @@
 {{!-- <link rel="stylesheet" href="styles/site/portfolio.css"> --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="portfolio">
   <div class="portfolio-area">
     <div class="portfolio-description">
       <h1>{{data.portfolio.title}}</h1>
 
-      {{{data.portfolio.description}}}
+      <span class="description">{{{data.portfolio.description}}}</span>
+
+      <a href={{{data.portfolio.gitLink}}} class="git-logo"> <i class="fa fa-github" > GitHub</i></a>
     </div>
 
     <div class="image">
@@ -37,7 +40,7 @@
   <div class="mySlides fade">
     
             <div class="gallery-img">
-							<img src="{{cloudinaryUrl }}" >
+							<img src="{{cloudinaryUrl }}"  crop="cover" >
             </div>  
 						
     
@@ -51,6 +54,7 @@
     <span class="dot" onclick="currentSlide(1)"></span> 
     <span class="dot" onclick="currentSlide(2)"></span> 
     <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
   </div>
 </div>
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

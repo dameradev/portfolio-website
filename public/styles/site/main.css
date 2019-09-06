@@ -63,17 +63,25 @@
   height: 40vh;
   position: relative;
   border-top: 1px solid rgb(56, 144, 216);
+  text-decoration: none;
 }
 .portfolio-list__item .bg-image {
-  background: url("/images/portfolio/item1.png") no-repeat border-box ;
-  height:25vh;
-  background-size: 15vh 50%;
-  background-position: center center; 
-  transition: background-size 0.6s;
+  /* background: url("/images/portfolio/item1.png") no-repeat border-box ; */
+  height:5vh;
+  width: 12vw;
+  margin: 0 auto;
+  /* background-size: 15vh 50%;
+  background-position: center center;  */
+  transition: width 0.6s ease-in-out;
 }
+.bg-image  img{
+width: 100%;
+}
+
 .portfolio-list__item:hover .bg-image {
-  background-size: 20vh 70%;
-  transition: background-size 0.6s; 
+  /* background-size: 20vh 70%; */
+  width: 15vw;
+  transition: width 0.6s; 
 }
 
 .portfolio-list__item h2 {
@@ -181,6 +189,11 @@
     font-size: 3rem;
     margin: 0;
   }
+
+  .text-typer {
+    font-size:1.2rem;
+  }
+
   .hero-text__paragraph {
     font-size:1.5rem;
     

@@ -5,7 +5,7 @@ exports = module.exports = function(req, res) {
   const locals = res.locals;
   
   // Set locals
-  
+  console.log(typeof req.params.portfolio, "req params")
   locals.section = "store";
   locals.filters = {
     portfolio: req.params.portfolio
@@ -14,7 +14,7 @@ exports = module.exports = function(req, res) {
   locals.data = {
     portfolios: []
   }
-  view.query('twitterGallery',  keystone.list("Gallery").model.findOne({key: "twitter-clone"}));
+  view.query('twitterGallery',  keystone.list("Gallery").model.findOne({key: req.params.portfolio}));
   view.on('init', function(next) {
     const q = keystone.list('Portfolio').model.findOne({
       slug: locals.filters.portfolio

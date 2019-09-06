@@ -28,15 +28,21 @@
   justify-content: space-between;
 }
 
+.description {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
 
 .portfolio .image {
   height: 40vh;
   width: 40vh;
   
+
 }
 
 .image img {
   width: 100%;
+  
 }
 
 
@@ -46,31 +52,59 @@
   padding: 0;
   margin: 0;
 }
+
+.git-logo {
+  width: 25px; 
+  display: inline;
+  color: #1d1d1d;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+.git-logo img {
+  width: 15%;
+  margin-left: 1rem;
+}
+
 .slideshow-container {
-  width: 80%;
+  width: 70vw;
   margin: 5rem auto;
-  height:85vh;
+  height:100%;
   border: 1px solid #eee;
   box-shadow: 1px 3px 8px 1px rgb(141, 141, 141);
   margin-bottom:10rem;
   display: flex;
+  flex-direction: column;
+  position: relative;
 
 }
 
 
 .gallery-img {
-  width: 100%;
+  height: 80vh;
+  background: gray;
+  overflow: hidden;
+  /* width: 80%; */
 }
 
 .gallery-img img {
-  width: 100%;
-  height: 80%;
+  /* width: 100%;
+  height: 80%; */
+  /* min-height: 100%;  */
+  /* width: 100%; */
+  width:100%; 
+   height: 100%;
+
+  object-fit: contain;
 }
 
 
 .slideshow-title {
   text-align: center;
-  padding:10px;
+  padding: 0;
+  margin: 0;
+  height: 10vh;
   background: #379683;
   
   
@@ -85,13 +119,14 @@
 .dots {
   background: #379683;
   display: flex;
-  padding: 0 10px;
+  justify-content: center;
+  height: 5vh;
 
 }
 .dots div {
   display: flex;
   align-self: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 
@@ -107,10 +142,10 @@
 } */
 
 
-/* Hide the images by default */
-.mySlides {
+/* Hide the images by default
+.Slides {
   display: none;
-}
+} */
 
 /* Next & previous buttons */
 .prev, .next {
