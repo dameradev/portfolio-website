@@ -5,28 +5,38 @@
   border: 1px solid #ccc;
   box-shadow: 1px 3px 8px 1px #ccc;
   padding: 20px;
-  height: 60vh;
+  height: auto;
+  
 }
 
 .portfolio .portfolio-description {
-
+  margin-bottom: 0;
 }
 
+
 .portfolio-area {
-  display: flex;
-  justify-content: space-between;
+  
   box-sizing: border-box;
+  text-align: center;
 }
 
 .portfolio-description h1 {
   font-weight: 300;
 }
-
+.portfolio-description ul {
+  list-style: none; 
+  padding:0;
+  text-align: left;
+}
+.portfolio-description ul li {
+  margin-bottom:10px;
+}
 .portfolio-details {
   margin-top: 5rem;
   display: flex;
   justify-content: space-between;
 }
+
 
 .description {
   font-size: 1.2rem;
@@ -34,8 +44,10 @@
 }
 
 .portfolio .image {
-  height: 40vh;
-  width: 40vh;
+  /* height: 40vh; */
+  width: 60%;
+  margin: 0 auto;
+  
   
 
 }
@@ -44,7 +56,9 @@
   width: 100%;
   
 }
-
+.portfolio-details {
+  margin: 0;
+}
 
 .portfolio-details p,
 .portfolio-details a {
@@ -59,6 +73,7 @@
   color: #1d1d1d;
   font-size: 2rem;
   font-weight: bold;
+  
 }
 
 
@@ -66,20 +81,15 @@
   width: 15%;
   margin-left: 1rem;
 }
-
 .slideshow-container {
-  width: 70vw;
-  margin: 5rem auto;
-  height:100%;
-  border: 1px solid #eee;
-  box-shadow: 1px 3px 8px 1px rgb(141, 141, 141);
-  margin-bottom:10rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
+  display: none;
 }
 
+.mobile-gallery {
+  margin: 5rem auto;
+  width: 70%;
+  text-align: center;
+}
 
 .gallery-img {
   height: 80vh;
@@ -89,13 +99,8 @@
 }
 
 .gallery-img img {
-  /* width: 100%;
-  height: 80%; */
-  /* min-height: 100%;  */
-  /* width: 100%; */
   width:100%; 
-   height: 100%;
-
+  height: 100%;
   object-fit: contain;
 }
 
@@ -228,3 +233,34 @@
   from {opacity: .4} 
   to {opacity: 1}
 }
+@media (min-width: 500px){
+  .portfolio-area {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 5rem;
+  }
+  .portfolio-description {
+    width: 80%;
+  }
+  .portfolio .image {
+    max-width: 25%;
+    margin: 0;
+  }
+  
+  .mobile-gallery {
+    display: none;
+  }
+  .slideshow-container {
+    width: 70vw;
+    margin: 5rem auto;
+    height:100%;
+    border: 1px solid #eee;
+    box-shadow: 1px 3px 8px 1px rgb(141, 141, 141);
+    margin-bottom:10rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+ }
+ 
