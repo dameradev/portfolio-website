@@ -29,12 +29,27 @@
   color: #707070;
 }
 
-.portfolio-desc ul{
-display: flex;
-flex-direction: column;
+.portfolio-desc {
+  font-size: 1.2rem;
 }
 
+.portfolio-desc ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.portfolio-desc ul li {
+  padding: 0.7rem 0;
+}
 
+@media(min-width: 40rem) {
+  .portfolio-desc ul {
+    padding: 2rem;
+  }
+  .portfolio-desc ul li {
+    padding: 0.2rem 0;
+  }
+}
 /* .portfolio-wrapper .
 portfolio-item .portfolio-desc {
 

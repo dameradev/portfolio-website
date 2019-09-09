@@ -95,6 +95,7 @@ main {
   opacity: 0;
   transform: translateY(-100%);
   transition: opacity 200ms ,transform 800ms  cubic-bezier(.93,.12,.88,.39);
+  text-align: center;
 }
 .mobile-nav__list {
   margin-top: 5rem;
@@ -103,6 +104,11 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
+}
+
+.mobile-nav__list div {
+  margin: 0 auto;
 }
 .mobile-nav__list-item {
   z-index: 200;
@@ -113,6 +119,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #161616;
+  font-size: 1.5rem;
+  
 }
 .mobile-nav__list-item:hover {
   cursor: pointer;
@@ -127,12 +136,20 @@ main {
 .toggle-button {
   background: transparent;
   border: none;
-  cursor: pointer;
   padding-top: 0;
   padding-bottom: 0;
   vertical-align: middle;
   z-index: 102;
+  margin-right: 10px;
+  
 }
+
+.toggle-button i {
+  font-size: 1.8rem;
+  color: white;
+  
+}
+
 .toggle-button img {
   width: 2.5rem;
 }

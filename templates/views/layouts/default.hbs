@@ -7,7 +7,7 @@
 		<title>Damjan_Radev</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="/styles/site.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></default>
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
 		{{{isAdminEditorCSS user}}}
@@ -25,7 +25,7 @@
     <header class="main-header">
       <div class="nav-brand">
         <a href="/">
-          <img src="/images/logo.png" alt="Damjan Radev">
+          <img src="https://res.cloudinary.com/dhtqhdbx7/image/upload/v1568043788/logo.png" alt="Damjan Radev">
           <h5>Damjan Radev</h5>
         </a>
       </div>
@@ -47,39 +47,19 @@
         </ul>
       </nav>
       <button class="toggle-button">
-        <img src="images/menu.png" id="toggle-image">
+        <i class="fa fa-bars"></i>
       </button>
     </header>
     
     <nav class="mobile-nav">
       <ul class="mobile-nav__list">
         <div>
+          {{# each navLinks}}
           <li class="mobile-nav__list-item">
-            <a href="/portfolio-items">
-              <p>Portfolio</p> 
-              <img src="images/portfolio.png" alt="">
-            </a>
-          </li>
-          <li class="mobile-nav__list-item">
-            <a href="about-me/index.html">
-              <p>About me</p> 
-              <img src="images/about-me.png" alt="">
-            </a>
-          </li>
-        </div>
-        <div>
-          <li class="mobile-nav__list-item">
-            <a href="blog/index.html">
-              <p>Blog</p>  
-              <img src="images/blog.png" alt="">
-            </a>
-          </li>
-          <li class="mobile-nav__list-item">
-            <a href="contact/index.html">
-              <p>Contact</p>
-              <img src="images/contact.png" alt="">
-            </a>
-          </li>
+             <a href="{{ href }}"><p>{{ label }}</p> </a>
+            </li>
+          {{/each}}
+          
         </div>
       </ul>
     </nav>
@@ -126,7 +106,7 @@
       </nav>
     </footer>
 
-  <script src="js/shared.js"></script>
+  <script src="../js/shared.js"></script>
 		
 		{{{isAdminEditorJS user}}}
 	</body>
