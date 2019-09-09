@@ -1,0 +1,41 @@
+.contact-container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-group {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.form-group label {
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.form-group input {
+  
+  
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  border: 1px solid #046e97;
+  border-radius: 20px;
+  color: #161616;
+  font-size: 1rem;
+}
+
+.form-actions button:hover {
+  background-color: #046e97;
+  color: white;
+}
