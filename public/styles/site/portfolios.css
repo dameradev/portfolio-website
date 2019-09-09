@@ -29,7 +29,14 @@
   color: #707070;
 }
 
-/* .portfolio-wrapper .portfolio-item .portfolio-desc {
+.portfolio-desc ul{
+display: flex;
+flex-direction: column;
+}
+
+
+/* .portfolio-wrapper .
+portfolio-item .portfolio-desc {
 
 } */
 

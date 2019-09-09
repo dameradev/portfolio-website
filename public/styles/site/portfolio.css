@@ -110,7 +110,7 @@
   padding: 0;
   margin: 0;
   height: 10vh;
-  background: #379683;
+  background: #046e97;
   
   
   box-shadow: 
@@ -122,7 +122,7 @@
 }
 
 .dots {
-  background: #379683;
+  background: #046e97;
   display: flex;
   justify-content: center;
   height: 5vh;
